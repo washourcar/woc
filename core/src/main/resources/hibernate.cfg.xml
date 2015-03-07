@@ -1,0 +1,19 @@
+<!-- The following doctype doesn't work when offline, so default to old one, 
+	which does work. <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate 
+	Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd"> -->
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">false</property>
+		<!-- Echo all executed SQL in format to Stdout -->
+		<property name="format_sql">false</property>
+		<mapping class="com.woc.model.User" />
+		<mapping class="com.woc.model.Role" />
+		<mapping class="com.woc.model.Booking" />
+		<mapping class="com.woc.model.City" />
+		<mapping class="com.woc.model.CityArea" />
+	</session-factory>
+</hibernate-configuration>

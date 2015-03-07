@@ -1,0 +1,327 @@
+.woc-color{
+	color: #e96125;
+	background-color: #fff;
+}
+
+.woc-get-app{
+	background-color: #e96125;
+	color: #fff;	
+}
+
+.woc-get-app:hover, .woc-get-app:focus{
+	background: #D5462D;
+	color: #fff;
+}
+
+#user-phone-value{
+	outline: 0;
+}
+
+
+
+.woc-logo{
+	width: 50px;
+	height: 48px;
+	background-size: 51px;
+	background-image: url('../../images/Logo_icon.png');
+	display: inline-block;
+	background-repeat: no-repeat;
+}
+
+.woc-title{
+	font-family: 'loveloblack';
+	font-size: 30px;
+	vertical-align: 50%;
+	padding-left:5px;
+}
+
+.navbar .navbar-nav > li > a {
+	color:#000;
+}
+
+.navbar .navbar-nav > li > a.woc-login{
+	/*color: #e96125;*/
+}
+
+.center-subheading{
+	display: inline-block;
+	font-size: 21px;
+}
+
+.text-changing{
+	color:#e96125;
+	display: none;
+	width:146px;
+	font-size: 25px;
+	/*font-weight: 900;*/
+	text-align:right;
+}
+
+.display-first{
+	display: inline-block;
+}
+
+.flag-dropdown{
+	display: none;
+}
+
+.container .intl-tel-input #user-phone-value{
+	padding-left:0px;
+	width:198px;
+	height:50px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	font-weight: 300;
+	border:none;
+	border-bottom:1px solid #9d9d9d;
+}
+
+.intl-tel-input{
+	width:200px;
+	height:50px;
+}
+
+.intl-tel-input{
+	padding-top: 20px;
+}
+
+.top-buffer { margin-top:30px; }
+
+.top-buffer-60 { margin-top:60px; }
+
+.top-buffer-10 { margin-top:10px; }
+
+.top-buffer-20 { margin-top:20px; }
+
+.btn:hover {
+	border:1px solid #e96125 ;
+}
+
+.navbar-toggle > .icon-bar {
+	background-color:#000;
+}
+
+.nav > li:hover, .nav > li:focus{
+	opacity: .5;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  /*background-color: #f5f5f5;*/
+  color:#9d9d9d;
+}
+
+.woc-social-icon {
+	padding:0 10px;
+	font-size: 18px;
+	color:#9d9d9d;
+}
+.heart{
+	color: rgb(228, 6, 6);
+	padding-left: 3px;
+	padding-right: 4px;
+	font-size: 13px;
+	padding-top: 5px;
+}
+.center-heading{
+	font-size: 45px;
+	font-weight: lighter;
+}
+.center-sub-heading{
+	font-size: 25px;
+}
+
+.navbar-fixed-top{
+	background-color: white;
+}
+
+.navbar-fixed-top .container{
+	height:70px;
+}
+
+.navbar-header{
+	height:70x;
+}
+
+.woc-android-app-image{
+	/*background: url('../../images/woc_app_nexus.png') no-repeat;*/
+	/*background-repeat: no-repeat;*/
+	background: url('../../images/Android.jpg') no-repeat;
+	height:485px;
+	width:250px;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0 auto;
+	background-position-x: -12px;
+
+}
+
+.woc-ios-app-image{
+	/*background: url('../../images/woc_app_ios.png') no-repeat;*/
+	/*background-repeat: no-repeat;*/
+	background: url('../../images/IOS.jpg') no-repeat;
+	height:485px;
+	width:260px;
+	background-position-x: -7px;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0 auto;
+
+}
+
+.download-play-store{
+	margin-top:10px;
+}
+
+.mobile-footer {
+	color:#000;
+}
+
+.mobile-footer .woc-social-icon{
+	color:#000;
+}
+.mobile-footer div.privacy{
+	border-left: 1px solid #ccc;
+}
+.mobile-footer .text-right{
+	text-align: right;
+}
+.white{
+	color:white;
+}
+
+.instant-icon{
+	position: absolute;
+	padding-top: 7px;
+	font-size: 15px;
+	left: 278px;
+	
+}
+
+.alert-danger{
+	background-color:white;
+	color:#E23F2A;
+	border:none;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+.alert-success{
+	background-color: white;
+	color:#319833;
+	border:none;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+@font-face{
+  font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+    font-family: 'loveloblack';
+    src: url('../../fonts/lovelo_black-webfont.eot');
+    src: url('../../fonts/lovelo_black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/lovelo_black-webfont.woff2') format('woff2'),
+         url('../../fonts/lovelo_black-webfont.woff') format('woff'),
+         url('../../fonts/lovelo_black-webfont.ttf') format('truetype'),
+         url('../../fonts/lovelo_black-webfont.svg#loveloblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+input:focus, .btn:focus, .btn:active {
+	outline:0;
+}
+
+.download-app-from-store-btn{
+	width:170px;
+}
+
+.copyright{
+	font-size: 10px;
+	vertical-align: top;
+	margin-top: 7px;
+}
+
+#get-app-button{
+	font-size: 25px;
+	padding:6px 10px 2px 10px;
+	font-weight: 300;
+}
+
+.or-class{
+	font-size: 16px;
+}
+
+.call-woc{
+	font-size: 25px;
+	font-weight: 300;
+}
+
+.call-woc a{
+	color:#e96125;
+}
+
+.call-woc a:active, a:hover, a:focus{
+	color:#e96125;
+	text-decoration: none;
+}
+
+.use-case-text{
+	font-size: 25px;
+	margin-bottom: 20px;
+	/*font-size: 16px;*/
+	font-weight: 300;
+	line-height: 1.4;
+}
+
+.90-min-delivery{
+	text-align:left;
+}
+
+.fa-lg{
+	vertical-align: 0%;
+}
+
+.btn{
+	border-radius: 5px;
+}
+.terms a{
+	cursor: pointer;
+	color: #000;
+}
+.panel-heading h4 a:hover, a:active, a:focus{
+    color: #000;
+}

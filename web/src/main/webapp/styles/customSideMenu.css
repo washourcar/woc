@@ -1,0 +1,223 @@
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-size:cover;
+    color: #000;
+    padding-top: 70px;
+}
+header{
+    background-color: #fff;
+    position: fixed;
+    height: 70px;
+}
+.cd-main-content{
+    padding-top: 0px;
+    background-color: #fff;
+}
+.cd-main-content .container{
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    transition-property: transform;
+    transition-duration: 0.4s;
+}
+.navbar-brand{
+    float: left;
+    font-size: 18px;
+    line-height: 20px;
+    height: 68px;
+    padding: 0px;
+}
+.navbar-brand img{
+    height: 60px;
+    padding-top: 8px;
+}
+#cd-menu-trigger{
+    background-color: #fff;
+    height: 88%;
+    width: 39px;
+}
+#cd-menu-trigger .cd-menu-text{
+   color: #000;
+   font-weight: lighter;
+}
+#cd-menu-trigger .cd-menu-icon{
+    background-color: #000;
+    font-weight: lighter;
+}
+#cd-top-nav ul {
+    padding-top: 14px;
+}
+#cd-top-nav li{
+    margin-right: 10px;
+}
+#cd-top-nav a{
+    color: #000;
+    font-weight: lighter;
+    vertical-align: baseline;
+}
+nav#cd-top-nav li:after{
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+nav#cd-top-nav li:hover:after{
+    width: 100%;
+    background: #e96125;
+}
+#cd-menu-trigger.is-clicked .cd-menu-icon::before, #cd-menu-trigger.is-clicked .cd-menu-icon::after {
+    background-color: #000;
+    font-weight: lighter;
+}
+#cd-top-nav{
+    top: 0px;
+    right: 28px;
+}
+.addRgba{
+    position: fixed;
+    background:#000;
+    width: 100%;  
+    height: 100%;
+    z-index: 9999;
+    opacity: 0.6;
+}
+.addRgba2{
+    position: fixed;
+    background:#000;
+    width: 100%;  
+    height: 100%;
+    z-index: 9999;
+    opacity: 0.6;
+}
+a:hover{
+    text-decoration: none;
+    background-color: #fff;
+}
+#cd-lateral-nav{
+    background-color: #fff;
+}
+#cd-lateral-nav a{
+    padding: 4px 16px 1px 0px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+}
+#cd-lateral-nav a:hover{
+    color: #000;
+}
+#cd-lateral-nav .cd-navigation{
+    margin: 17px 32px 0;
+    border-bottom: 1px solid #eee;
+}
+nav#cd-lateral-nav .links li{
+    height: 50px;
+}
+nav#cd-lateral-nav .social-media li{
+    height: 70px;
+}
+nav#cd-lateral-nav .links li a:after{
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+nav#cd-lateral-nav .links li a:hover:after{
+    width: 100%;
+    background: #e96125;
+}
+
+nav#cd-lateral-nav .extra-links li{
+    height: 40px;
+}
+#cd-lateral-nav .extra-links a{
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+nav#cd-lateral-nav .extra-links li a:after{
+    content: '';
+    display: block;
+    height: 1.5px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+nav#cd-lateral-nav .extra-links li a:hover:after{
+    width: 100%;
+    background: #ffa53e;
+}
+/*.download-section .download-app{
+    padding: 22px 16px 17px 32px;
+    color: #000;
+}
+#cd-lateral-nav .download-section a{
+    padding: 0px 16px 17px 32px
+
+}
+.download-btn{
+    height: 45px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.download-btn:hover{
+    opacity: 0.8;
+}*/
+
+#cd-lateral-nav ul.social-media{
+    border-bottom: 1px solid #eee;
+}
+#cd-lateral-nav .social-media li .first-icon{
+   padding: 22px 0px 16px 0px
+}
+#cd-lateral-nav .social-media li a{
+    color: #000;
+    float: left;
+    padding: 22px 0px 16px 5px;
+}
+.woc-social-icon {
+    color: #666;
+    font-size: 18px;
+}
+
+.twitter:hover .fa-twitter{
+    color: #00ACED;
+} 
+.facebook:hover .fa-facebook{
+    color:#3B5998;
+}
+.google:hover .fa-google-plus{
+    color: #C63D2D;
+}
+.linkedin:hover .fa-linkedin{
+    color: #4875B4;
+}
+.github:hover .fa-github{
+    color: #000;
+}
+.footer{
+    height: 60px;
+    border-top: 1px solid #eee;
+}
+.copyright{
+    font-size: 12px;
+}
+.footer li{
+    font-size: 12px;
+}
+#cd-lateral-nav footer .cd-navigation{
+    border-bottom: none;
+}
+#cd-lateral-nav .cd-navigation.social-media{
+    margin-top: 0px;
+}
+.cd-menu-icon, .cd-menu-icon:before, .cd-menu-icon:after{
+    z-index: 99999;
+}
+#cd-top-nav a.hiring-bold{
+    color: #e96125;
+    font-weight: 400;
+}
