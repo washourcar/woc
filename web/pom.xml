@@ -99,7 +99,7 @@
         <dependency>
             <groupId>${project.parent.groupId}</groupId>
             <artifactId>woc-core</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0</version>
         </dependency>
         <dependency>
             <groupId>org.appfuse</groupId>
