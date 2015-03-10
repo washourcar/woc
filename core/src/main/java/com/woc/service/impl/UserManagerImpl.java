@@ -1,12 +1,16 @@
 package com.woc.service.impl;
 
 import org.apache.commons.lang.StringUtils;
+
+import com.twilio.sdk.TwilioRestException;
 import com.woc.dao.UserDao;
 import com.woc.model.User;
 import com.woc.service.MailEngine;
+import com.woc.service.SMSEngine;
 import com.woc.service.UserExistsException;
 import com.woc.service.UserManager;
 import com.woc.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.mail.SimpleMailMessage;
@@ -15,6 +19,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.jws.WebService;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
@@ -33,6 +38,7 @@ public class UserManagerImpl extends GenericManagerImpl<User, Long> implements U
     private UserDao userDao;
 
     private MailEngine mailEngine;
+    private SMSEngine smsEngine;
     private SimpleMailMessage message;
     private PasswordTokenManager passwordTokenManager;
 
@@ -58,6 +64,11 @@ public class UserManagerImpl extends GenericManagerImpl<User, Long> implements U
     }
 
     @Autowired(required = false)
+    public void setSmsEngine(SMSEngine smsEngine) {
+		this.smsEngine = smsEngine;
+	}
+
+	@Autowired(required = false)
     public void setMailMessage(final SimpleMailMessage message) {
         this.message = message;
     }
@@ -241,6 +252,14 @@ public class UserManagerImpl extends GenericManagerImpl<User, Long> implements U
         mailEngine.sendMessage(message, template, model);
     }
 
+    public void sendUserSMS(final User user, final String message) throws TwilioRestException {
+        smsEngine.sendTwilioSms("+91"+user.getPhoneNumber(), message);
+    }
+    
+    public void sendUserSMS(String mobileNumber, String message) throws TwilioRestException {
+        smsEngine.sendTwilioSms(mobileNumber, message);
+    }
+    
     /**
      * {@inheritDoc}
      */

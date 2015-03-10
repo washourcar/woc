@@ -76,10 +76,10 @@
                 <form:input cssClass="form-control" path="phoneNumber" id="phoneNumber"/>
             </div>
         </div>
-        <div class="form-group">
+        <%-- <div class="form-group">
             <appfuse:label styleClass="control-label" key="user.website"/>
             <form:input cssClass="form-control" path="website" id="website"/>
-        </div>
+        </div> --%>
         <div>
             <legend class="accordion-heading">
                 <a data-toggle="collapse" href="#collapse-address"><fmt:message key="user.address.address"/></a>

@@ -98,4 +98,6 @@ public final class Constants {
     public static final String BOOKING_CANCELED = "Canceled";
     
     public static final String BOOKING_CLOSED = "Closed";
+    
+    public static final String IJAZ_MOBILE_NUMBER = "9751139390";
 }

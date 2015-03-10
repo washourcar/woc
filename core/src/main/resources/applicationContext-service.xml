@@ -94,5 +94,10 @@
 
     <!-- Password reset token encoder -->
     <bean id="passwordTokenEncoder" class="org.springframework.security.crypto.password.StandardPasswordEncoder"/>
-
+    <!-- sms engine -->
+	<bean id="smsEngine" class="com.woc.service.SMSEngine">
+        <property name="twilioAccountsId" value="${twilio.account.sid}"/>
+        <property name="twilioAuthToken" value="${twilio.auth.token}"/>
+        <property name="twilloFromNumber" value="${twillo.from.number}"/>
+    </bean>
 </beans>
