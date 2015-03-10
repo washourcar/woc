@@ -111,6 +111,7 @@ public class SignupController extends BaseFormController {
 
         try {
             sendUserMessage(user, getText("signup.email.message", locale), RequestUtil.getAppURL(request));
+            getUserManager().sendUserSMS(user, getText("signup.email.message", locale));
         } catch (final MailException me) {
             saveError(request, me.getMostSpecificCause().getMessage());
         }

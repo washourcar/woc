@@ -1,7 +1,9 @@
 package com.woc.service;
 
+import com.twilio.sdk.TwilioRestException;
 import com.woc.dao.UserDao;
 import com.woc.model.User;
+
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -137,4 +139,22 @@ public interface UserManager extends GenericManager<User, Long> {
      * @throws UserExistsException
      */
     User updatePassword(String username, String currentPassword, String recoveryToken, String newPassword, String applicationUrl) throws UserExistsException;
+    
+    /**
+     * send user sms
+     * 
+     * @param user
+     * @param message
+     * @throws TwilioRestException
+     */
+    void sendUserSMS(final User user, final String message) throws TwilioRestException;
+    
+    /**
+     * send user sms
+     * 
+     * @param mobileNumber
+     * @param message
+     * @throws TwilioRestException
+     */
+    void sendUserSMS(String mobileNumber, String message) throws TwilioRestException;
 }
