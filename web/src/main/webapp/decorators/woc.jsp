@@ -38,7 +38,7 @@
 <main class="cd-main-content">
 	<decorator:body/>
 </main>
-<nav id="cd-lateral-nav">
+<nav id="cd-lateral-nav" class="navbar navbar-default">
     <ul class="cd-navigation links">
         <li class="top-link"><a href="/aboutus">ABOUT US</a></li>
         <li class="hidden-md"><a href="/mobile">MOBILE APP</a></li>
@@ -95,6 +95,10 @@
                     	<div id="success-message" class="alert alert-success collapse">
 						    <a href="#" class="close" data-dismiss="alert">&times;</a>
 						    <strong>Success!</strong> booked successfully, We will contact you ASAP.
+						</div>
+						<div id="error-message" class="alert alert-danger collapse">
+						    <a href="#" class="close" data-dismiss="alert">&times;</a>
+						    <div id="errorMessage"></div>
 						</div>
                         <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 form-group">
                             <input id="userName" name="userName" placeholder="Name" class="form-control" type="text" required="" autofocus="">

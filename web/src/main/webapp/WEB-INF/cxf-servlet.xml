@@ -12,7 +12,8 @@
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
 
     <bean id="jsonProvider" class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
-
+	<bean id="appExceptionMapper" class="com.woc.common.GenericExceptionMapper"/>
+	
     <jaxws:endpoint id="userService" implementor="#userManager" address="/UserService"/>
     <jaxws:endpoint id="bookingService" implementor="#bookingManager" address="/BookingService"/>
     <jaxws:endpoint id="metaDataService" implementor="#metaDataManager" address="/MetaDataService"/>
@@ -28,6 +29,7 @@
             <ref bean="metaDataManager"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
+        	<ref bean="appExceptionMapper"/>
             <ref bean="jsonProvider"/>
         </jaxrs:providers>
         <jaxrs:extensionMappings>

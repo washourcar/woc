@@ -143,16 +143,21 @@ jQuery(document).ready(function($){
             url: url,
             data: JSON.stringify(result),
             success: function(data){
+            	alert(JSON.stringify(data));
             	if(data.id != undefined && data.id != null && data.id != ''){
             		$('#success-message').removeClass( "collapse" );
             		 $('#book-button').attr('disabled','disabled');
+            	}
+            },error: function (jqXHR, status, err) {
+            	if(jqXHR.responseJSON != undefined && jqXHR.responseJSON != null && jqXHR.responseJSON != ''){
+            		var errorMessage = '<strong>Failed! </strong>' + jqXHR.responseJSON.error;
+            		$('#error-message').removeClass( "collapse" );
+            		$('#errorMessage').html(errorMessage);
             	}
             },
             dataType: "json",
             contentType : "application/json"
         });
     });
-
-
 });
 

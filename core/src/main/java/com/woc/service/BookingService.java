@@ -11,6 +11,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
+import com.woc.common.AppException;
 import com.woc.model.Booking;
 
 @WebService
@@ -39,7 +40,7 @@ public interface BookingService {
 	@POST
 	@Path("/booking")
 	@Produces("application/json")
-	Booking saveBooking(Booking booking) throws UserExistsException;
+	Object saveBooking(Booking booking) throws UserExistsException, AppException;
 
 	@PUT
 	@Path("/booking")
