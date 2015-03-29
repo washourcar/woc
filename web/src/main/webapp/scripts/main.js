@@ -111,53 +111,38 @@ jQuery(document).ready(function($){
 
     initTypeAhead($("#location"), "location", "/metadata/getArea/",10);
 
-    $("#book-button").click(function(){
+    $("#book-button").click(function() {
+        if($("#cPass")[0].checkValidity()){
         var url = "services/api/booking"
-        /*var paramMap = {
-            'userName' : $("#userName").val(),
-            'userEmail' : $("#userEmail").val(),
-            'userMobileNo' : $("#userMobileNo").val(),
-            'city' : $("#city").val(),
-            'area' : $("#area").val(),
-            'bookingDate' : $("#bookingDate").val(),
-            'bookingTime' : $("#bookingTime").val(),
-        };
-        $.post(url, JSON.stringify(paramMap), function(data){
-            console.log("ggggg"+data);
-            if(data != null){
-                console.log(data);
-            }
-        });*/
-
-        var result = { };
+        var result = {};
         $.each($("#cPass").serializeArray(), function () {
-        	if(this.name == "bookingDate" && this.value != null && this.value != undefined && this.value != ''){
-        		result[this.name] = this.value.split(" ")[0];
-        		result["bookingTime"] = this.value.split(" ")[1];
-        	} else {
-        		result[this.name] = this.value;
-        	}
+            if (this.name == "bookingDate" && this.value != null && this.value != undefined && this.value != '') {
+                result[this.name] = this.value.split(" ")[0];
+                result["bookingTime"] = this.value.split(" ")[1];
+            } else {
+                result[this.name] = this.value;
+            }
         });
         $.ajax({
             type: "POST",
             url: url,
             data: JSON.stringify(result),
-            success: function(data){
-            	alert(JSON.stringify(data));
-            	if(data.id != undefined && data.id != null && data.id != ''){
-            		$('#success-message').removeClass( "collapse" );
-            		 $('#book-button').attr('disabled','disabled');
-            	}
-            },error: function (jqXHR, status, err) {
-            	if(jqXHR.responseJSON != undefined && jqXHR.responseJSON != null && jqXHR.responseJSON != ''){
-            		var errorMessage = '<strong>Failed! </strong>' + jqXHR.responseJSON.error;
-            		$('#error-message').removeClass( "collapse" );
-            		$('#errorMessage').html(errorMessage);
-            	}
+            success: function (data) {
+                if (data.id != undefined && data.id != null && data.id != '') {
+                    $('#success-message').removeClass("collapse");
+                    $('#book-button').attr('disabled', 'disabled');
+                }
+            }, error: function (jqXHR, status, err) {
+                if (jqXHR.responseJSON != undefined && jqXHR.responseJSON != null && jqXHR.responseJSON != '') {
+                    var errorMessage = '<strong>Failed! </strong>' + jqXHR.responseJSON.error;
+                    $('#error-message').removeClass("collapse");
+                    $('#errorMessage').html(errorMessage);
+                }
             },
             dataType: "json",
-            contentType : "application/json"
+            contentType: "application/json"
         });
+    }
     });
 });
 
